@@ -11,23 +11,23 @@ module.exports = {
       console.log(jsonError)
     }
 
-    let putParams = {
-      TableName: process.env.DYNAMODB_USERS_TABLE,
-      Item: {
-        firstName: bodyObj.firstName,
-        lastName: bodyObj.lastName,
-        email: bodyObj.email,
-        password: bodyObj.password
-      }
-    }
+    // let putParams = {
+    //   TableName: process.env.DYNAMODB_USERS_TABLE,
+    //   Item: {
+    //     firstName: bodyObj.firstName,
+    //     lastName: bodyObj.lastName,
+    //     email: bodyObj.email,
+    //     password: bodyObj.password
+    //   }
+    // }
 
-    let putResults = {}
-    try {
-      let dynamodb = new AWS.DynamoDB.DocumentClient()
-      putResults = await dynamodb.put(putParams).promise()
-    } catch(putError) {
-      console.log(putError)
-    }
+    // let putResults = {}
+    // try {
+    //   let dynamodb = new AWS.DynamoDB.DocumentClient()
+    //   putResults = await dynamodb.put(putParams).promise()
+    // } catch(putError) {
+    //   console.log(putError)
+    // }
 
     return {
       statusCode: 201
