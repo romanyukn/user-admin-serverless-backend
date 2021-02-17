@@ -1,8 +1,14 @@
 {
+  "scripts": {
+    "deploy": "sls deploy",
+    "destroy": "sls remove",
+    "start:local": "export SLS_DEBUG=* && sls offline --noAuth"
+  },
   "dependencies": {
     "aws-sdk": "^2.842.0"
   },
   "devDependencies": {
+    "serverless": "^2.23.0",
     "serverless-offline": "^6.8.0"
   }
 }
